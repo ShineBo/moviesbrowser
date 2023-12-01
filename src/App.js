@@ -19,9 +19,9 @@ function App() {
         .then(data => {
           setSearchResults(data.results);
         })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
+        // .catch(error => {
+        //   console.error('Error fetching data:', error);
+        // });
     }
   }, [searchText]);
 
