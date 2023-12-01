@@ -21,18 +21,13 @@ const MovieCard = ( { movie }) => {
 )}
 
     const SearchView = ( { keyword, searchResults }) => {
-    const title = `You are searching for ${keyword}`
+    const title = keyword ? `You are searching for ${keyword}` : "Try Search Something in the search box"
     console.log(searchResults, "are the search results")
 
     const originalTitles = searchResults.map((obj, i) => {
     return <MovieCard movie={obj} key={i} />
     }
     );
-
-    // const myList = ["a", "b", "c", "d"]
-    // const allList = myList.map((list) => {
-    //     return <div>{list}</div>
-    // })
 
     return (
         <>

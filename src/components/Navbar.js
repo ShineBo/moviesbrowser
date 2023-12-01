@@ -1,6 +1,18 @@
 import { useNavigate, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useEffect,useRef } from 'react';
+
 
 const Navbar = ( { searchText, setSearchText }) => {
+
+    const searchInputRef = useRef(null);
+    const location = useLocation();
+  
+    useEffect(() => {
+      if (location.pathname === '/search') {
+        searchInputRef.current.focus();
+      }
+    }, [location.pathname]);
 
     const navigate = useNavigate()
 
@@ -35,7 +47,7 @@ return (
                 </li>
             </ul>
             <form className="d-flex" role="search" onSubmit={handleEventChange}>
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchText} onChange={updateSearchText} />
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchText} onChange={updateSearchText} ref={searchInputRef}/>
                 <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
