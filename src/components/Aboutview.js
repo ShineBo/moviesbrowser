@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import noImg from "./assests/noImg.jpeg"
 
 const Aboutview = () => {
 return (
@@ -19,16 +20,10 @@ return (
         <h2>Meet the Team</h2>
         <div className="row">
           <div className="col-md-4">
-            <img src="logo192.png" alt="Team Member 1" className="img-fluid rounded-circle" />
-            <h3>John Doe</h3>
-            <p>Founder & CEO</p>
-          </div>
-          <div className="col-md-4">
-            <img src="logo512.png" alt="Team Member 2" className="img-fluid rounded-circle" />
-            <h3>Jane Smith</h3>
+            <img src={noImg} alt="Team Member 2" className="img-fluid rounded-circle" />
+            <h3>Shine Bo Bo</h3>
             <p>Lead Developer</p>
           </div>
-          {/* Add more team members as needed */}
         </div>
       </section>
     </div>

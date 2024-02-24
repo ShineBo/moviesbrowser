@@ -6,7 +6,7 @@ import Coming from './components/Cs';
 import Aboutview from './components/Aboutview';
 import { Routes, Route } from 'react-router-dom'
 import SearchView from './components/SearchView';
-import MovieView from './components/MovieView';
+import MovieDetailsView from './components/MovieDetailsView';
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -33,7 +33,7 @@ function App() {
         <Route path='/about' element={<Aboutview />} />
         <Route path='/comingsoon' element={<Coming />} />
         <Route path='/search' element={<SearchView keyword={searchText} searchResults={searchResults} />} />
-        <Route path='/movies/:id' element={<MovieView />} />
+        <Route path='/movies/:id' element={<MovieDetailsView />} />
       </Routes>
     </div>
   );
